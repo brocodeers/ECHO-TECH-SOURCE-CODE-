@@ -1,0 +1,89 @@
+.container{
+    margin-top: 2%;
+}
+/* Reset some default Bootstrap styles */
+.navbar {
+    background-color: #3498db;
+}
+
+.navbar a.navbar-brand,
+.navbar a.nav-link {
+    color: #3498db;
+}
+
+/* Style the search bar */
+.form-control {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+}
+
+/* Style the search button */
+.btn-outline-success {
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+}
+
+/* Center the main heading */
+h1.text-center {
+    margin-top: 1rem;
+    color: #3498db;
+}
+
+/* Style the cards */
+.card {
+    border: 1px solid #ccc;
+}
+
+.card-header {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Add spacing between card content */
+.card-body {
+    padding: 1rem;
+}
+
+/* Style the card titles */
+.card-title {
+    color: #3498db;
+}
+
+/* Style list items within cards */
+ul.list-unstyled li {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Style dropdown menu items */
+.dropdown-menu a.dropdown-item {
+    color: #555;
+}
+
+/* Highlight active nav link */
+.nav-link.active {
+    color: #3498db;
+}
+
+/* Style the toggle button */
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Style the main container */
+.container {
+    margin-top: 2rem;
+}
+
+/* Customize the border color for the last card */
+.card.border-primary {
+    border-color: #3498db;
+}
+
+/* Additional styling for specific card elements */
+.text-bg-primary {
+    background-color: #3498db;
+    color: #fff;
+}

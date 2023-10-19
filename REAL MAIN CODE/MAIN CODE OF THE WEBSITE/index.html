@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Data Dashboard</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Teamlogo.png" alt="Team Logo">
+        </div>
+           
+        <div class="Heading">
+            <h1>Realtime Data Dashboard</h1>
+        </div>
+        <div class="navbar-options">
+            <ul>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="Member.html">Members</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="CoverImage">
+        <img src="Greenhouse.png" alt="Cover Image" class="cover-image"> 
+    </div>
+
+
+    <div class="container">
+            <div class="data">
+            <div class="card temperature-card"> <!-- Add "temperature-card" class -->
+                <div class="card-side front">
+                    <div class="temperature-bar-container">
+                        <div class="temperature-bar" id="temperature-bar"></div>
+                    </div>
+                    <h2>Temperature: <span id="temperature">N/A</span> °C</h2>
+                </div>
+                <div class="card-side back">
+                    <h4>TEMP MESSAGE -  <span id="tempmessage">N/A</span></h4>
+                </div>
+            </div>
+            
+            
+            <div class="card water-level-card"> <!-- Add "water-level-card" class -->
+                <div class="card-side front">
+                    <div class="water-level-bar-container">
+                        <div class="water-level-bar" id="water-level-bar"></div>
+                    </div>
+                    <h2>Water Level: <span id="humidity">N/A</span>%</h2>
+                </div>
+                <div class="card-side back">
+                    <h4>WATER MESSAGE - <span id="humimessage">N/A</span></h4>
+                </div>
+            </div>
+            
+
+            <div class="card co2-level-card"> <!-- Add "co2-level-card" class -->
+                <div class="card-side front">
+                    <div class="co2-level-bar-container">
+                        <div class="co2-level-bar" id="co2-level-bar"></div>
+                    </div>
+                    <h2>CO2 Level: <span id="co2">N/A</span></h2>
+                </div>
+                <div class="card-side back">
+                    <h4>CO2 MESSAGE - <span id="message_CO2">N/A</span></h4>
+                </div>
+            </div>
+            
+
+            <div class="card light-level-card"> <!-- Add "light-level-card" class -->
+                <div class="card-side front">
+                    <div class="light-level-icon">
+                        <img src="Light.png" alt="Light Icon">
+                    </div>
+                    <h2>Light Level: <span id="light">N/A</span></h2>
+                </div>
+                <div class="card-side back">
+                    <h4>LIGHT MESSAGE - <span id="message_light">N/A</span></h4>
+                </div>
+            </div>
+            
+
+            <div class="card soil-moisture-card light-level-card"> <!-- Add both "soil-moisture-card" and "light-level-card" classes -->
+                <div class="card-side front">
+                    <div class="light-level-icon">
+                        <img src="Mositure.png" alt="Soil Moisture Icon"> <!-- Replace with your soil moisture icon image -->
+                    </div>
+                    <h2>Soil Moisture: <span id="moisture">N/A</span>%</h2>
+                </div>
+                <div class="card-side back">
+                    <h4>MOISTURE MESSAGE - <span id="msg_moist">N/A</span></h4>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script src="firebase.js"></script>
+</body>
+</html>

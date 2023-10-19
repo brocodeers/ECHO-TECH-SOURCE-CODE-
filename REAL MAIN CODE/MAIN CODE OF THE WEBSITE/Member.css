@@ -1,0 +1,42 @@
+/* Style the member cards */
+.member-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the member photos */
+.member-card img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Style the member names */
+.member-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Style the member descriptions */
+.member-card p {
+    font-size: 1rem;
+}
+
+/* Clear any floats (prevent wrapping) */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .member-card {
+        width: 100%;
+    }
+}

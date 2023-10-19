@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(97, 91, 91, 0.005); /* Set a light gray background color */
+}
+.container{
+  background-color: whitesmoke;
+}
+.Heading {
+  margin-left: 10%;
+  color: #333;
+  text-align: center;
+  justify-content: center;
+}
+.CoverImage{
+  padding: 2px 0px;
+  margin-top: 2%;
+
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3498db;
+  padding: 10px;
+}
+.Team-name{
+  color: whitesmoke;
+  margin-left: 15%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.navbar-logo img {
+  width: 100px; /* Adjust the logo image size */
+  margin-right: 10px;
+}
+
+.navbar-options {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-options ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-options li {
+  margin: 0 20px; /* Adjust the spacing between menu items */
+}
+
+.navbar-options a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.navbar-options input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-options a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+/* Style for the cover image */
+/* .cover-image {
+  display: flex; /* Make sure the image is a block element */
+ /* width: 1260px; /* Ensure the image doesn't exceed its container's width */
+ /* height: 500px; /* Maintain the image's aspect ratio */
+ /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+
+.cover-image {
+  display: flex; /* Ensure the image behaves as a block element */
+  max-width: 100%; /* Make the image responsive by allowing it to scale down */
+  height: 400px; /* Maintain the image's aspect ratio */
+  width: 1260px; /* Set a maximum width to prevent the image from scaling up beyond its original size */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+
+.Heading h1 {
+  font-size: 2rem; /* Increase the font size for a bigger heading */
+  text-transform: uppercase; /* Uppercase the text */
+  letter-spacing: 2px; /* Add letter spacing for a more stylish look */
+  position: relative;
+  transition: color 0.3s, text-shadow 0.3s; /* Add transitions for color and text shadow */
+}
+
+.Heading h1::before {
+  content: '';
+  position: absolute;
+  width: 100%;  
+  height: 2px;
+  background: whitesmoke; /* Set the underline color */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: 100%;
+  transition: transform 0.3s; /* Add a transition for the underline */
+}
+
+.Heading h1:hover {
+  color: white; /* Change the text color on hover */
+  text-shadow: 0 0 10px whitesmoke; /* Add a text shadow on hover */
+}
+
+.Heading h1:hover::before {
+  transform: scaleX(1); /* Reveal the underline on hover */
+}
+
+
+/* Style for the container of the data cards */
+.data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Center the two cards in the second row */
+.data .card:nth-child(4),
+.data .card:nth-child(5) {
+  margin: 10px auto; /* Adjust the margin to reduce the distance */
+}
+
+/* Style for the individual data cards */
+.card {
+  padding: 10px;
+  perspective: 150rem;
+  position: relative;
+  width: calc(33.33% - 20px); /* Adjust the width and margin as needed */
+  height: 200px;
+  margin: 10px; /* Adjust the margin for the first row cards */
+  box-sizing: border-box;
+  transition: transform 0.5s ease; /* Add a transition for z-axis rotation */
+}
+
+/* Style for the card sides */
+.card-side {
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Style for the text inside the cards */
+.card-side h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Style for the back side of the card */
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+/* Style for the front side of the card */
+.card-side.front {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+/* On hover, flip the card */
+.card:hover .card-side.front {
+  transform: rotateX(20deg); /* Move the front side up on hover */
+  background-color: #0072b5; /* Change the background color on hover */
+}
+
+.card:hover .card-side.back {
+  transform: rotateX(-20deg); /* Move the back side down on hover */
+  background-color: #38428f; /* Change the background color on hover */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+
+.temperature-card .temperature-bar-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.temperature-card .temperature-bar {
+  background: url('temp.png') no-repeat; /* Add your temperature bar image */
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.water-level-card .water-level-bar-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.water-level-card .water-level-bar {
+  background: url('water.png') no-repeat; /* Add your water level image */
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.co2-level-card .co2-level-bar-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.co2-level-card .co2-level-bar {
+  background: url('CO2.png') no-repeat; /* Add your CO2 level image */
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.light-level-card .light-level-icon {
+  text-align: center;
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+.light-level-card .light-level-icon img {
+  width: 100px; /* Adjust the image size as needed */
+}
+
+.light-level-card .card-side.front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-level-card .card-side.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-level-card .card-side.front, .light-level-card .card-side.back {
+  background-color: #ffcc00; /* Change the background color as desired */
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.light-level-card:hover .card-side.front {
+  transform: rotateX(20deg);
+}
+
+.light-level-card:hover .card-side.back {
+  transform: rotateX(-20deg);
+}
+
+.soil-moisture-card .light-level-icon {
+  text-align: center;
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+.soil-moisture-card .light-level-icon img {
+  width: 200px; /* Adjust the image size as needed */
+  height: 100px;
+}
+
+.soil-moisture-card .card-side.front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.soil-moisture-card .card-side.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.soil-moisture-card .card-side.front,
+.soil-moisture-card .card-side.back {
+  background-color: #ffcc00; /* Change the background color as desired */
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.soil-moisture-card:hover .card-side.front {
+  transform: rotateX(20deg);
+}
+
+.soil-moisture-card:hover .card-side.back {
+  transform: rotateX(-20deg);
+}
